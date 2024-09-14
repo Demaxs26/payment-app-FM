@@ -30,19 +30,236 @@ body{
 
 #main-block{
     display: flex;
-    width: 70%;
+    width: min(70%,1000px);
     margin-top: 15vh;
     background-color: var(--White);
     border-radius: 30px;
     overflow: hidden;
 }
 
+/* left block dtyle start */
+
 #left-info-block{
+    position: relative;
     width: 50%;
     padding: 40px;
 }
 
+.information-entry-box{
+    display: flex;
+    flex-direction: column;
+}
 
+.title-clear-ligne{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.title-clear-ligne h1{
+    color: var(--Slate-900)
+}
+
+.title-clear-ligne .text-label{
+    align-self: center;
+    text-decoration: underline var(--Slate-300);
+    text-underline-offset: 3px;
+}
+
+.text-label{
+    color: var(--Slate-700);
+    font-size: 16px;
+}
+
+.wrap{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.wrap .text-label{
+    margin-bottom:12px ;
+}
+
+input[type=number]{
+    height: 45px;
+    cursor: pointer;
+    z-index: 2;
+    background-color: unset;
+    border-radius: 5px;
+    border: var(--Slate-500) 1px solid;
+    margin-bottom: -20px;
+    padding-left: 60px;
+    font-size: 20px;
+    color: var(--Slate-900);
+    font-weight: bold;
+    -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+
+
+
+input:hover{
+    border-color: var(--Slate-900);
+}
+
+input:focus-visible{
+    outline: unset;
+    border-color: var(--lime);
+}
+
+
+input:focus-visible + label{
+    background-color: var(--lime);
+    border-right-color: var(--lime);
+    border-color: var(--lime);
+}
+.number-unit{
+    font-size: 2Opx;
+    z-index: 1;
+    color: var(--Slate-900);
+    font-weight: bold;
+    position: relative;
+    bottom: 26px; 
+    text-align: center;
+    height :33px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    align-self: flex-start;
+    width: 40px;
+    padding-top: 12px;
+    background-color: var(--Slate-100);
+    
+}
+
+.two-in-on-line .number-unit{
+
+    align-self: flex-end;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.wrap .special{
+    width: 80px;
+}
+
+
+.two-in-on-line input{
+    padding-left: 20px;
+}
+
+.two-in-on-line .wrap{
+    width: 47%;
+}
+
+.two-in-on-line{
+    display: flex;
+    justify-content: space-between;
+}
+
+.err-message{
+    margin-top: -10px;
+    color: var(--red);
+    font-size: 13px;
+    display: none;
+}
+
+fieldset{
+    border: none;
+    
+}
+.radio-box{
+    border: var(--Slate-900) 1px solid;
+    border-radius: 5px;
+    height: 45px;
+    margin-top: 20px;
+}
+
+.radio-box:hover{
+    border-color: var(--lime);
+}
+
+
+
+input[type ="radio"]{
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+    left: 20px;
+    background-color: #fff;
+    margin: 0;
+    color: var(--Slate-900);
+    width: 19px;
+    height: 19px;
+    border: 2px solid var(--Slate-900);
+    border-radius: 50%;
+    transform: translateY(13px);
+
+}
+
+input[type="radio"] + span{
+    position: relative;
+    left: 40px;
+    top: 10px;
+    color: var(--Slate-900);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+input[type="radio"]::before {
+    content: "";
+    width: 0.65rem;
+    top: 0.15rem;
+    left: 0.15rem;
+    position:absolute;
+    height: 0.65rem;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--lime);
+  }
+
+input[type="radio"]:checked::before {
+    transform: scale(1);
+}
+
+input[type="radio"]:checked{
+    border-color: var(--lime);
+}
+
+.calculate-button{
+    margin-top: 30px;
+    width: 80%;
+    height: 45px;
+    border-radius: 45px;
+    border: unset;
+    background-color: var(--lime);
+    color: var(--Slate-900);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.calculate-button img{
+    margin-right: 15px;
+    position: relative;
+    top: 3px;
+}
+
+.calculate-button:hover{
+    background-color: va;
+}
+/*  left block style end  */
+
+/*  right block style sart */
 
 #right-result-block{
     width:50%;
@@ -51,3 +268,4 @@ body{
     border-bottom-left-radius: 70px;
 }
 
+/* right block style end */

@@ -18,20 +18,75 @@
   <main id ="main-block">
    
     <section id = "left-info-block" >   <!-- Information  Formulair section start-->
-      <h1> Mortgage Calculator </h1>
-      Clear All
+      <div class ="information-entry-box">
+
+        <div class ="title-clear-ligne">
+          <h1> Mortgage Calculator </h1>
+          <p class ="text-label"> Clear All </p>
+        </div>
+
+
+        <div class ="wrap">
+
+          <label class ="text-label" for = "amount"> Mortgage Amount</label>
+         
+          <input type="number" name ="amount" min ="0"/>
+          <label for ="amount" class ="number-unit">£</label>
+          <label for ="amount" class ="err-message">Your mortage amount must be above 0 !</label>
+
+        </div>
+
+        <div class ="two-in-on-line">
+
+          <div class ="wrap">
+
+            <label class ="text-label" for ="term">Mortgage Term</label>
+            
+            <input type="number" name ="term"/>
+            <label for ="term" class ="number-unit special">years</label>
+            <label for ="term" class ="err-message">The number of month must be above 0 !</label>
+  
+          </div>
+  
+  
+          <div class="wrap">
+  
+            <label class ="text-label" for ="rate">Interest Rate</label>
+           
+            <input type="number" name ="rate"/>
+            <label for="rate" class ="number-unit">%</label>
+            <label for="rate" class ="err-message">the rate must be between 0 and 100 !</label>
+  
+          </div>
+
+        </div>
+
+
+        <fieldset>
+          <legend class ="text-label">Mortgage Type</legend>
+          
+          <div class ="radio-box">
+            <label>
+              <input type="radio" class ="radio-button" name ="type" value="repayment">
+              <span class ="text-radio" for = "repayments">Repayment</span>
+            </label>
+           
+          </div >
+
+          <div class ="radio-box">
+            <label>
+              <input type="radio" class ="radio-button" name ="type" value ="interestOnly">
+              <span class ="text-radio" for = "interestOnly"> Interest Only</span>
+            </label>
+
+          </div>
+
+        </fieldset>
+
+      </div>
+
     
-      Mortgage Amount
-    
-      Mortgage Term
-    
-      Interest Rate
-    
-      Mortgage Type
-      Repayment
-      Interest Only
-    
-      Calculate Repayments
+      <button class ="calculate-button"><img src ="assets/images/icon-calculator.svg" alt ="icon calculator"/>Calculate Repayments</button> 
     </section>                         <!-- Information  Formulair section end-->
 
     <section id = "right-result-block">    <!-- Result section start-->

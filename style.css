@@ -30,17 +30,17 @@ body{
 
 #main-block{
     display: flex;
-    width: min(70%,1000px);
     margin-top: 15vh;
+    width:60%;
     background-color: var(--White);
     border-radius: 30px;
     overflow: hidden;
+
 }
 
 /* left block dtyle start */
 
 #left-info-block{
-    position: relative;
     width: 50%;
     padding: 40px;
 }
@@ -254,18 +254,40 @@ input[type="radio"]:checked{
     top: 3px;
 }
 
-.calculate-button:hover{
-    background-color: va;
-}
 /*  left block style end  */
 
 /*  right block style sart */
 
 #right-result-block{
-    width:50%;
     padding: 40px;
+    width: 50%;
     background-color: var(--Slate-900);
     border-bottom-left-radius: 70px;
 }
 
+.Empty-resultat-card{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10vh;
+}
+
+.Empty-resultat-card img{
+    width: 60%;
+    margin-bottom: 20px;
+}
+
+.Empty-resultat-card > h1,p{
+    text-align: center;
+    color: var(--White);
+    margin-bottom: 20px;
+}
+
+.Complete-result-card{
+    display: none;
+}
+
+
 /* right block style end */
+/* MZ9  https://www.quiziniere.com/diffusions/BN9QK2/copie/MZ9*/

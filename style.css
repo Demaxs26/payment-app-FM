@@ -31,7 +31,7 @@ body{
 #main-block{
     display: flex;
     margin-top: 15vh;
-    width:60%;
+    width:1000px;
     background-color: var(--White);
     border-radius: 30px;
     overflow: hidden;
@@ -41,7 +41,8 @@ body{
 /* left block dtyle start */
 
 #left-info-block{
-    width: 50%;
+    position: relative;
+    width: 420px;
     padding: 40px;
 }
 
@@ -260,7 +261,7 @@ input[type="radio"]:checked{
 
 #right-result-block{
     padding: 40px;
-    width: 50%;
+    width: 420px;
     background-color: var(--Slate-900);
     border-bottom-left-radius: 70px;
 }
@@ -290,4 +291,23 @@ input[type="radio"]:checked{
 
 
 /* right block style end */
-/* MZ9  https://www.quiziniere.com/diffusions/BN9QK2/copie/MZ9*/
+
+
+@media screen and (max-width: 1000px){
+    #main-block{
+        flex-direction: column;
+        width: 100%;
+        border-radius: 0;
+        margin-top: 0;
+    }
+    #left-info-block , #right-result-block{
+        width: 100%;
+        border-radius: 0;
+    }
+    .calculate-button{
+        width: max-content;
+        padding:  0 30px;
+    }
+}
+
+/* MZ9 */

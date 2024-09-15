@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href = "style.css" type ="text/css">
   <title>Frontend Mentor | Mortgage repayment calculator</title>
-
+  <script src ="script.js" defer></script>
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -30,7 +30,7 @@
 
           <label class ="text-label" for = "amount"> Mortgage Amount</label>
          
-          <input type="number" name ="amount" min ="0"/>
+          <input type="number" id ="mortageAmount"name ="amount" min ="0"/>
           <label for ="amount" class ="number-unit">£</label>
           <label for ="amount" class ="err-message">Your mortage amount must be above 0 !</label>
 
@@ -42,7 +42,7 @@
 
             <label class ="text-label" for ="term">Mortgage Term</label>
             
-            <input type="number" name ="term"/>
+            <input type="number" id ="mortageTerm"name ="term"/>
             <label for ="term" class ="number-unit special">years</label>
             <label for ="term" class ="err-message">The number of month must be above 0 !</label>
   
@@ -53,7 +53,7 @@
   
             <label class ="text-label" for ="rate">Interest Rate</label>
            
-            <input type="number" name ="rate"/>
+            <input type="number" id ="mortageRate"name ="rate"/>
             <label for="rate" class ="number-unit">%</label>
             <label for="rate" class ="err-message">the rate must be between 0 and 100 !</label>
   

@@ -12,6 +12,7 @@
     --Slate-500: hsl(200, 26%, 54%);
     --Slate-700: hsl(200, 24%, 40%);
     --Slate-900: hsl(202, 55%, 16%);
+    --Complet-color: #0E2431;
 }
 
     /*       define basic style and font     */
@@ -287,6 +288,44 @@ input[type="radio"]:checked{
 
 .Complete-result-card{
     display: none;
+    flex-direction: column;
+
+}
+
+.Complete-result-card .text, .yellox-text {
+    text-align: start;
+    
+}
+
+.result-box{
+    margin-top: 20px;
+    background-color: var(--Complet-color);
+    border-radius: 2%;
+    padding: 30px;
+    border-top: var(--lime) 4px solid;
+}
+
+.big-result-box{
+    border-bottom: var(--Slate-700) 1px solid;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.text{
+    color: var(--Slate-500);
+    line-height: 23px;
+    font-weight: bold;
+}
+
+.titre{
+    color: var(--White);
+    margin-bottom: 10px;
+}
+
+.yellow-text{
+    margin-top: -10px;
+    color:  var(--lime);
+    font-size: 4rem;
 }
 
 

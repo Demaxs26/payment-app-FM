@@ -243,17 +243,26 @@ input[type="radio"]:checked{
     width: 80%;
     height: 45px;
     border-radius: 45px;
+    display: flex;
+    justify-content: center;
     border: unset;
     background-color: var(--lime);
     color: var(--Slate-900);
     font-size: 20px;
     font-weight: bold;
+    padding: 30px 0;
 }
 
 .calculate-button img{
     margin-right: 15px;
     position: relative;
-    top: 3px;
+    bottom: 10px;
+}
+
+.calculate-button h3{
+    font-size: 20px;
+    position: relative;
+    bottom: 10px;
 }
 
 /*  left block style end  */

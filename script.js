@@ -25,27 +25,29 @@ function f_Repayments(){
     const Term = mortageterm.value;
     let Rate = mortageRate.value*(10**-2);  // convert in percentage with can be multiply
     let repayment = 0;
-    const repaymentsPerMonth =f_Calculate_Repayments(Amount,Term,Rate);
+    let repaymentsPerMonth =f_Calculate_Repayments(Amount,Term,Rate);
     if (mortageTypeList[0].checked){  // check the type of Mortage 
         repayment = repaymentsPerMonth*12*Term; // Total repayment
         
     }else{
         repayment = repaymentsPerMonth*12*Term-Amount; // only added bby rate repayment
+        repaymentsPerMonth = repaymentsPerMonth-(Amount/(12*Term));
     }
     return [repayment ,repaymentsPerMonth]
 }
 
 function f_Add_Result_Page(repayment){
-    BigPrice.textContent = "£"+repayment[0];
-    littlePrice.textContent = "£"+repayment[1];
+    console.log(f_displayCorectPrice(repayment[0]));
+    BigPrice.textContent = "£"+f_displayCorectPrice(repayment[1]);
+    littlePrice.textContent ="£"+ f_displayCorectPrice(repayment[0]);
 }
 
 
 function f_displayCorectPrice(price){
-    if (price.includes(".")){
-        const index = price.find((element)=> element == ".");
-        
+    if (!Number.isInteger(price)){
+        return Math.round(price*100)/100
     }
+    return price
 }
 
 btncalcul.addEventListener("click", function(){  // when user click on the btn

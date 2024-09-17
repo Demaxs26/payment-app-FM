@@ -80,6 +80,7 @@ body{
     
 }
 
+
 .wrap .text-label{
     margin-bottom:12px ;
 }
@@ -90,7 +91,6 @@ input[type=number]{
     z-index: 2;
     background-color: unset;
     border-radius: 5px;
-    border: var(--Slate-500) 1px solid;
     margin-bottom: -20px;
     padding-left: 60px;
     font-size: 20px;
@@ -105,6 +105,13 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+.inputErr{
+    border: var(--red) 1px solid;
+}
+
+.input-ok{
+    border: var(--Slate-700) 1px solid;
+}
 
 
 
@@ -113,7 +120,8 @@ input:hover{
     border-color: var(--Slate-900);
 }
 
-input:focus-visible{
+
+input:focus{
     outline: unset;
     border-color: var(--lime);
 }
@@ -169,11 +177,20 @@ input:focus-visible + label{
 }
 
 .err-message{
-    margin-top: -10px;
+    margin-top: -15px;
+    margin-bottom: 20px;
     color: var(--red);
     font-size: 13px;
     display: none;
 }
+
+.number-unit:has(+ .error){
+    background-color: var(--red);
+    color: var(--Slate-100);
+}
+
+
+
 
 fieldset{
     border: none;
@@ -184,6 +201,10 @@ fieldset{
     border-radius: 5px;
     height: 45px;
     margin-top: 20px;
+}
+
+.err-special{
+    margin-top: 10px;
 }
 
 .radio-box:hover{

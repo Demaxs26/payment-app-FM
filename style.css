@@ -319,11 +319,11 @@ input[type="radio"]:checked{
 .Complete-result-card{
     display: none;
     flex-direction: column;
-
 }
 
 .Complete-result-card .text, .yellox-text {
     text-align: start;
+    width: fit-content;
     
 }
 
@@ -333,12 +333,14 @@ input[type="radio"]:checked{
     border-radius: 2%;
     padding: 30px;
     border-top: var(--lime) 4px solid;
+   
 }
 
 .big-result-box{
     border-bottom: var(--Slate-700) 1px solid;
     padding-bottom: 30px;
     margin-bottom: 30px;
+   
 }
 
 .text{
@@ -360,12 +362,10 @@ input[type="radio"]:checked{
 
 
 /* right block style end */
-
-
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1000px) {
     #main-block{
         flex-direction: column;
-        width: 100%;
+        width:auto ;
         border-radius: 0;
         margin-top: 0;
     }
@@ -373,9 +373,30 @@ input[type="radio"]:checked{
         width: 100%;
         border-radius: 0;
     }
+}
+
+@media screen and (max-width: 471px){
+
+    #left-info-block , #right-result-block{
+        width: fit-content;
+    }
     .calculate-button{
         width: max-content;
         padding:  0 30px;
+    }
+    .two-in-on-line{
+        flex-direction: column;
+    }
+
+    .two-in-on-line .wrap{
+        width: 100%;
+        
+    }
+    .Complete-result-card{
+        width: min-content;
+    }
+    .result-box{
+        width: min-content;
     }
 }
 

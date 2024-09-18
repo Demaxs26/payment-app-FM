@@ -70,10 +70,12 @@ function f_dislay_error(field,champ,fieldName){
 
 
 function f_undislay_error(field,fieldName){
+    
     errMessageList[field].style.display = "none"; // unshow the error message
     errMessageList[field].classList.remove("error");
     fieldName.classList.remove("inputErr");
     fieldName.classList.add("input-ok");
+
 }
 
 
@@ -127,9 +129,17 @@ btncalcul.addEventListener("click", function(){  // when user click on the btn
 
 
 for(let i =0; i<AllIput.length;i++){
-    AllIput[i].addEventListener("input",function(){
-        f_undislay_error(i,AllIput[i]);
-    })
+    if (i === 3 || i === 4){
+        AllIput[i].addEventListener("input",function(){
+            console.log("ok");
+            f_undislay_error(3,AllIput[i]);
+        })
+    }else{
+        AllIput[i].addEventListener("input",function(){
+            f_undislay_error(i,AllIput[i]);
+        })
+    }
+
 }
 
 for(let i =0; i<AllIput.length-2;i++){

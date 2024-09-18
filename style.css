@@ -62,7 +62,7 @@ body{
     color: var(--Slate-900)
 }
 
-.title-clear-ligne .text-label{
+.title-clear-ligne p{
     align-self: center;
     text-decoration: underline var(--Slate-300);
     text-underline-offset: 3px;
@@ -365,24 +365,38 @@ input[type="radio"]:checked{
 @media screen and (max-width: 1000px) {
     #main-block{
         flex-direction: column;
-        width:auto ;
+        width:fit-content ;
         border-radius: 0;
+        align-items: center;
         margin-top: 0;
     }
     #left-info-block , #right-result-block{
-        width: 100%;
+        width: fit-content;
         border-radius: 0;
     }
+    .Empty-resultat-card img{
+        width: 40%;
+        margin-bottom: 20px;
+    }
+    .calculate-button h3 img{
+        bottom: 0px;
+    }
+    .Complete-result-card{
+        width: fit-content;
+    }
+
+
+
 }
 
-@media screen and (max-width: 471px){
+@media screen and (max-width: 600px){
 
     #left-info-block , #right-result-block{
         width: fit-content;
     }
     .calculate-button{
         width: max-content;
-        padding:  0 30px;
+        padding:  20px 30px;
     }
     .two-in-on-line{
         flex-direction: column;
@@ -393,11 +407,11 @@ input[type="radio"]:checked{
         
     }
     .Complete-result-card{
-        width: min-content;
+        width: fit-content;
     }
     .result-box{
-        width: min-content;
+        width: fit-content;
     }
+
 }
 
-/* MZ9 */
